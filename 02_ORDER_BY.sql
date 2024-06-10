@@ -66,3 +66,15 @@ select category_code,
        ref_category_code
 from tbl_category
 order by ref_category_code is null desc;
+
+-- 한개를 조회해서 두번 정렬 할때
+select
+    category_code,
+    category_name,
+    ref_category_code
+from
+    tbl_category
+order by
+    ref_category_code is null desc, -- null 값의 위치를 정하고
+    ref_category_code asc; -- ref_category_code 오름차순으로 정렬
+
