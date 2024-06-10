@@ -162,3 +162,96 @@ where menu_price not between 10000 and 25000
 -- 메뉴 가격이 10000 이상 25000 이하가 아닌 값을 출력
 -- not = != 같다고 보면 될듯
 
+/*
+LIKE 연산자
+- 특정 패턴과 일치하는 행을 검색
+
+패턴
+- % : 0개 이상의 문자를 의미
+EX) '%apple%' 는 apple 이 포함된 모든 문자열을 의미
+-- sdjsadhgsh'apple'asdfhkljhhgfjkdshjgk
+-- 중간에 apple 이라는 문자가 존재하면 인식
+
+- _ : 한개의 문자열을 나타낸다.
+ex) 'a_k' 는 'a' 로 시작화고 'k' 로 끝나는 세글자 문자열을 의미
+*/
+
+select
+    *
+from
+    tbl_menu
+where menu_name like '___초밥';
+
+/*
+menu 에서 '갈치' 라는 단어가 들어간 메누를 찾아보자
+*/
+
+select
+    *
+from
+    tbl_menu
+where
+    menu_name like '%갈치%';
+
+-- LIKE 부정표현
+select
+    *
+from
+    tbl_menu
+where
+    menu_name not like '%갈치%';
+
+/*
+IN 연산자
+- 특정 열의 값이 지정된 목록 중 하나와 일치하는지 확인하는데 사용
+
+IN 사용법
+[column_name] in (4,5,6,.....)
+*/
+
+select
+    menu_name,
+    category_code
+from
+    tbl_menu
+where
+    category_code in (4 , 5, 6);
+-- category_code 의 (4,5,6) 목록중에 있는 데이터만 조회
+
+-- IN 연산자의 부정표현
+select
+    menu_name,
+    category_code
+from
+    tbl_menu
+where
+    category_code not in (4,5,6);
+-- category_code 의 (4,5,6) 목록중에 4,5,6 을 제외한 데이터만 조회
+
+/*
+IS NULL 연산자
+-- 값이 null 인지 아닌지 확인 조회
+*/
+
+select
+    category_code,
+    category_name,
+    ref_category_code
+from
+    tbl_category
+where
+    ref_category_code is null;
+--  ref_category_code  가 null 인 데이터만 조회
+
+-- IS NULL 연산자의 부정표현
+select
+    category_code,
+    category_name,
+    ref_category_code
+from
+    tbl_category
+where
+    ref_category_code is not null;
+--  ref_category_code  가 null 이 아닌 데이터만 조회
+
+
