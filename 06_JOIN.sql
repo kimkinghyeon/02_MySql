@@ -108,3 +108,5 @@ select
     b.category_name 대분류
 from tbl_category a
 join tbl_category b on a.ref_category_code = b.category_code;
+
+
