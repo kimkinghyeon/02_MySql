@@ -105,16 +105,57 @@ with rollup;
 
 -- 컬럼 두개를 활용한 ROLLUP
 -- 메뉴 가격별 총합 및 해당 메뉴 가격별 같은 카테고리의 총합
+-- 값의 총합
+/*
+1 = 1500
+2 = 1500
+null = 3000
+*/
 
+select menu_price      메뉴가격,
+       category_code   카테고리_코드,
+       sum(menu_price) 총합,
+       count(*)        갯수
+from tbl_menu
+group by menu_price,
+         category_code
+with rollup;
+
+-- 1. 특정 카테고리 총 메뉴 가격이 20000원 이상인경우
+    select
+        category_code,
+        menu_price
+    from
+        tbl_menu
+    group by
+        menu_price,
+        category_code
+    having
+        menu_price >= 20000;
+
+-- 2. 특정 카테고리의 메뉴 수가 3개 이상인 경우
 select
-    menu_price 메뉴가격,
-    category_code 카테고리_코드,
-    sum(menu_price) 총합,
-    count(*) 갯수
+    category_code,
+    count(*)
+from
+    tbl_menu
+group by
+    category_code
+having
+   count(*) >= 3;
+
+-- 3. 특정 카테고리에서 주문 가능한 메뉴의 평균 가격이 10000원 이상인경우
+select
+    category_code,
+    menu_price,
+avg(menu_price)
 from
     tbl_menu
 group by
     menu_price,
     category_code
-with rollup;
+having
+   avg(menu_price) >= 10000;
+
+
 
