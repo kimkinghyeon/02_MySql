@@ -149,7 +149,7 @@ select menu_name,
        menu_price,
        category_code
 from tbl_menu
-where menu_price between 10000 and 25000
+where menu_price between 10000 and 25000;
 -- 메뉴 가격이 10000원 이상 25000원 이하
 
 -- BETWEEN 의 부정표현

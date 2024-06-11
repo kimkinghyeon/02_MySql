@@ -24,7 +24,7 @@ from tbl_menu
 order by menu_price desc,
          menu_name desc;
 
--- 컬럼을 연산해서, 연산결과와 함 ㄱ[ 정렬할 수 있다.
+-- 컬럼을 연산해서, 연산결과와 함께 정렬할 수 있다.
 -- order by 절을 이용하여 연산결과와 함께정렬
 select menu_name,
        menu_code * menu_price as multiple
@@ -47,7 +47,7 @@ from tbl_menu;
 select menu_name,
        orderable_status
 from tbl_menu
-order by field(orderable_status, 'N', 'Y')
+order by field(orderable_status, 'N', 'Y');
 
 -- null 값이 있는 컬럼에 대한 정렬
 select category_code,
