@@ -157,13 +157,13 @@ CTE(Common Table Expressions)
 */
 
 -- 메뉴명과 카테고리명을 함께 출력
-with menucate as (select menu_name,
+with manucate as (select menu_name,
                          category_name
                   from tbl_menu a
                            join
                        tbl_category b on a.category_code = b.category_code)
 select *
-from menucate
+from manucate
 order by menu_name;
 
 

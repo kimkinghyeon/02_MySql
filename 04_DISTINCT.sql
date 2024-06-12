@@ -6,7 +6,7 @@ select category_code
 from tbl_menu
 order by category_code;
 
--- distinct select 뒤에 작성한다.
+-- select 뒤에 작성한다. distinct
 
 select distinct category_code
 from tbl_menu
