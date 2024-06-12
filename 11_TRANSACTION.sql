@@ -9,9 +9,9 @@ set autocommit = 0;
 set autocommit = off;
 -- autocommit 활성화
 set autocommit = 1;
-set autocommit = on;
-
 select * from tbl_menu;
+
+set autocommit = on;
 start transaction;
 insert into tbl_menu values (null, '바나나스플릿' , 8500 ,4,'Y');
 update tbl_menu set menu_name = '수정된 메뉴' where menu_code = 5;
