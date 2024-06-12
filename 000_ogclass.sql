@@ -57,4 +57,21 @@ select
 from
     classtable
 order by
-    subject_no;
+    student_no asc
+limit 5;
+
+select
+    a.student_name,
+    b.subject_name
+from classtable a
+join favorite_subject b on a.subject_no = b.subject_no
+order by
+    a.student_no;
+
+select
+    subject_no,
+    student_name
+from
+    classtable
+order by
+    student_no;
