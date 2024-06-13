@@ -76,5 +76,5 @@ from
     tbl_category
 order by
     ref_category_code is null desc, -- null 값의 위치를 정하고
-    ref_category_code asc; -- ref_category_code 오름차순으로 정렬
+    ref_category_code; -- ref_category_code 오름차순으로 정렬
 
