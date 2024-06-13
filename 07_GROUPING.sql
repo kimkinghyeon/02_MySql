@@ -42,7 +42,7 @@ from tbl_menu
 group by menu_price,
          category_code;
 
--- category_code , orderable_starus
+-- category_code , orderable_status
 select category_code,
        orderable_status,
        count(*)        총갯수,
