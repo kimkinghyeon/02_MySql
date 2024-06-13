@@ -21,7 +21,7 @@ values (null, '박태근', '남', 'Ohgiraffers-bear', 'bear.ohgiraffers@gmail.co
        (null, '양혜연', '남', 'yanghyeyeon', 'yhy4058@gmail.com', null, 5),
        (null, '강진영', '여', 'weed97', 'weed97,weed9935@gmail.com', null, 3),
        (null, '이규섭', '남', 'LKS9616', 'lks609591@gmail.com', null, 3),
-       (null, '전유안', '남', 'euuuuuuan', 'euan.may24@gmail.com', null, 3),
+       (null, '전유안', '여', 'euuuuuuan', 'euan.may24@gmail.com', null, 3),
        (null, '박성은', '남', 'seongeun223', 'jklun080921@gmail.com', null, 3),
        (null, '박하얀', '여', 'parkhayarn', 's0224y92@gmail.com', null, 3),
        (null, '위성민', '남', 'wdh970616', '	wdh970616@naver.com', null, 3),
@@ -30,7 +30,7 @@ values (null, '박태근', '남', 'Ohgiraffers-bear', 'bear.ohgiraffers@gmail.co
        (null, '권은혜', '여', 'dmsgpk237', 'a01027947353@gmail.com', null, 3),
        (null, '권보현', '여', 'Kwonbohyun', 'kwon18923@gmail.com', null, 3),
        (null, '배하은', '여', 'HEun0420', 'usialeta@gmail.com', null, 5),
-       (null, '강연진', '여', 'kangyeonjin', 'yeonjin917n.n@gmail.com', null, 3);
+       (null, '강연진', '여', 'kangyeonjin', '''yeonjin917n.n@gmail.com', null, 3);
 
 drop table if exists classtable;
 drop table if exists favorite_subject;
